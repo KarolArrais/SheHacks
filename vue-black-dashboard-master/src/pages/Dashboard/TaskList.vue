@@ -3,8 +3,6 @@
                 thead-classes="text-primary">
       <template slot-scope="{row}">
         <td>
-          <base-checkbox v-model="row.done">
-          </base-checkbox>
         </td>
         <td>
           <p class="title">{{row.title}}</p>
