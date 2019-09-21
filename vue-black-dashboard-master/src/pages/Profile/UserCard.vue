@@ -8,7 +8,7 @@
       <div class="block block-three"></div>
       <div class="block block-four"></div>
       <a href="#">
-        <img class="avatar" src="img/anime6.png" alt="...">
+        <img class="avatar" src="http://forumcts.ifsc.edu.br/files/2014/03/joice.jpg" alt="...">
         <h5 class="title">{{user.fullName}}</h5>
       </a>
       <p class="description">
