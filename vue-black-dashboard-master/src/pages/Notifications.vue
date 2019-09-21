@@ -2,47 +2,38 @@
 
   <div class="row">
     <h1>
-          Serviços de extensão de LOA
+          Serviços de extensão do LOA
         </h1>
     <div >
       <card>
-        <h4 slot="header">Notifications Style</h4>
+        <h4 slot="header">Serviço comunitário:</h4>
         <base-alert type="info">
-          <span>This is a plain notification</span>
+          <span>- Parcerias com escolas públicas para ensino de programação básica</span>
         </base-alert>
-        <base-alert type="info" dismissible>
-          <span>This is a plain notification</span>
-        </base-alert>
-        <base-alert type="info" dismissible with-icon>
-          <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">This is a notification with close button and icon.</span>
-        </base-alert>
-        <base-alert type="info" dismissible with-icon>
-          <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
+        <base-alert type="info">
+          <span>- Jogos e brincadeiras direcionados para inclusão de alunos com deficiências visuais.</span>
         </base-alert>
       </card>
     </div>
-    <div class="col-md-6">
+
+    <div >
       <card>
-        <h4 slot="header">Notifications states</h4>
-        <base-alert type="primary" dismissible>
-          <span><b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
+        <h4 slot="header">Projetos de Extensão:</h4>
+        <base-alert type="info">
+          <span>- GT-REMAR: facilitação e ampliação na construção e o reuso de recursos educacionais abertos, 
+            por meio da plataforma web (REMAR), que oferece ferramentas para compartilhamento e a customização 
+            de jogos educacionais abertos, para diferentes plataformas, além do compartilhamento com grupos e o
+             acompanhamento de progresso de participantes nos jogos.</span>
         </base-alert>
-        <base-alert type="info" dismissible>
-          <span><b> Info - </b> This is a regular notification made with ".alert-info"</span>
-        </base-alert>
-        <base-alert type="success" dismissible>
-          <span><b> Success - </b> This is a regular notification made with ".alert-success"</span>
-        </base-alert>
-        <base-alert type="warning" dismissible>
-          <span><b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-        </base-alert>
-        <base-alert type="danger" dismissible>
-          <span><b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
+        <base-alert type="info">
+          <span>- PROEXT: desenvolvido o Programa de Formação e Desenvolvimento de Recursos Educacionais Abertos 
+            (Edital PROEXT 2014/MEC-SESu), que tem como foco o desenvolvimento de recursos educacionais abertos, 
+            em especial jogos educacionais para cursos técnicos e de graduação presenciais e a distância nas áreas 
+            de Química, Enfermagem e Música. </span>
         </base-alert>
       </card>
     </div>
+    <!--
     <div class="col-md-12">
       <card>
         <div class="places-buttons">
@@ -86,7 +77,7 @@
           </div>
         </div>
       </card>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
