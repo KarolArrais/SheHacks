@@ -1,21 +1,32 @@
 <template>
   <div class="row">
     <div class="col-md-aaa">
+      <h1>
+          Informações sobre LOA
+        </h1>
       <div class="card">
         <div class="card-header mb-5">
-          <h5 class="card-category">Informações sobre o laboratório</h5>
-          <h3 class="card-title">Created using Poppins Font Family</h3>
         </div>
-        <div class="card-body">
-          <div class="typography-line">
-            <h1>
-               Laboratório de Objetos de Aprendizagem </h1>
-          </div>
+        <span>Nome do laboratório</span>
           <div class="typography-line">
             <h2>
-              <span>Header 2</span>The Life of Black Dashboard </h2>
+              Laboratório de objetos de aprendizagem </h2>
           </div>
+
+          <span>Universidade de origem</span>
           <div class="typography-line">
+            <h2>
+              Universidade Federal de São Carlos </h2>
+          </div>
+
+          <span>Linhas de pesquisa</span>
+          <div class="typography-line">
+            <h2>
+              loal </h2>
+          </div>
+
+
+          <!--<div class="typography-line">
             <h3>
               <span>Header 3</span>The Life of Black Dashboard </h3>
           </div>
@@ -38,8 +49,8 @@
               I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push
               possibilities, to show people, this is the level that things could be at.
             </p>
-          </div>
-          <div class="typography-line">
+          </div>-->
+          <!--<div class="typography-line">
             <span>Quote</span>
             <blockquote>
               <p class="blockquote blockquote-primary">
@@ -154,7 +165,7 @@
             </p>
             <pre>1. #This is an example of preformatted text.<br/>2. #Here is another line of code</pre>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
