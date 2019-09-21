@@ -22,7 +22,7 @@
           <span>Linhas de pesquisa</span>
           <div class="typography-line">
             <h2>
-              The Life of Black Dashboard </h2>
+              loal </h2>
           </div>
 
 
