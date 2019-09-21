@@ -1,6 +1,9 @@
 <template>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-aaa">
+        <h1>
+          Membros de LOA
+        </h1>
       <user-card :user="user"></user-card>
       <user-card :user="user"></user-card>
       <user-card :user="user"></user-card>
@@ -38,4 +41,7 @@
   }
 </script>
 <style>
+#col-md-aaa{
+  width: 100%;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-aaa">
       <div class="card">
         <div class="card-header mb-5">
           <h5 class="card-category">Informações sobre o laboratório</h5>
@@ -163,4 +163,7 @@
   export default {};
 </script>
 <style>
+#col-md-aaa{
+  width: 100%;
+}
 </style>

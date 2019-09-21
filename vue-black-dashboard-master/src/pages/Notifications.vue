@@ -1,6 +1,10 @@
 <template>
+
   <div class="row">
-    <div class="col-md-6">
+    <h1>
+          Serviços de extensão de LOA
+        </h1>
+    <div >
       <card>
         <h4 slot="header">Notifications Style</h4>
         <base-alert type="info">
