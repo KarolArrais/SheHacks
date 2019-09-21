@@ -40,7 +40,7 @@
     props: {
       title: {
         type: String,
-        default: "Laboratórios"
+        default: "Cientiza"
       },
       backgroundColor: {
         type: String,
