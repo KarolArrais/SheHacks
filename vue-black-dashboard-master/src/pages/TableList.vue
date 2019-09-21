@@ -1,103 +1,77 @@
 <template>
-    <div class="row">
-      <div class="col-12">
-        <card :title="table1.title">
-          <div class="table-responsive">
-            <base-table :data="table1.data"
-                        :columns="table1.columns"
-                        thead-classes="text-primary">
-            </base-table>
-          </div>
-        </card>
-      </div>
 
-      <div class="col-12">
-        <card class="card-plain">
-          <div class="table-full-width table-responsive">
-            <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
-                         :columns="table2.columns">
-
-            </base-table>
-          </div>
-        </card>
-      </div>
-
+  <div class="row">
+    <h1>
+          BUSCA DE PARCERIA
+        </h1>
+    <div >
+      <h4 slot="header">OFERTA DE EXPERTISE:</h4>
+      <card>
+        <base-alert type="danger">
+          <span><b>Breve descritivo: </b> Estamos disponíveis para colaborar no desenvolvimento de jogos educativos e 
+            preparação de equipes para atuação no mesmo campo.
+          </span>
+          <br>
+          <span><b>É possível fazer colaboração à distância (S/N)? </b> Sim
+          </span>
+          <br>
+          <span><b>Pesquisador responsável:</b> Profa. Dra. Joice Lee Otsuka - email@exemplo.br.
+          </span>
+          <br>
+          <span><b>Período de colaboração:</b> de MM/ANO até MM/ANO.
+          </span>
+          <br>
+          <span><b>Caso tenha interesse, preencha abaixo:</b>
+          </span>
+        </base-alert>
+        <span>[Link para CV Lattes] <br> 
+[Nome sobrenome] <br> 
+[E-mail]
+          </span>
+      </card>
     </div>
+
+Período de colaboração: de MM/ANO até MM/ANO. 
+Caso tenha interesse, preencha abaixo: 
+Link para CV Lattes. 
+Nome sobrenome. 
+E-mail.
+
+
+    
+    
+  </div>
 </template>
 <script>
-import { BaseTable } from "@/components";
-const tableColumns = ["Name", "Country", "City", "Salary"];
-const tableData = [
-  {
-    id: 1,
-    name: "Dakota Rice",
-    salary: "$36.738",
-    country: "Niger",
-    city: "Oud-Turnhout",
-  },
-  {
-    id: 2,
-    name: "Minerva Hooper",
-    salary: "$23,789",
-    country: "Curaçao",
-    city: "Sinaai-Waas"
-  },
-  {
-    id: 3,
-    name: "Sage Rodriguez",
-    salary: "$56,142",
-    country: "Netherlands",
-    city: "Baileux"
-  },
-  {
-    id: 4,
-    name: "Philip Chaney",
-    salary: "$38,735",
-    country: "Korea, South",
-    city: "Overland Park"
-  },
-  {
-    id: 5,
-    name: "Doris Greene",
-    salary: "$63,542",
-    country: "Malawi",
-    city: "Feldkirchen in Kärnten"
-  },
-  {
-    id: 6,
-    name: 'Mason Porter',
-    salary: '$98,615',
-    country: 'Chile',
-    city: 'Gloucester'
-  },
-  {
-    id: 7,
-    name: 'Jon Porter',
-    salary: '$78,615',
-    country: 'Portugal',
-    city: 'Gloucester'
-  }
-];
+  import NotificationTemplate from './Notifications/NotificationTemplate';
+  import { BaseAlert } from '@/components';
 
-export default {
-  components: {
-    BaseTable
-  },
-  data() {
-    return {
-      table1: {
-        title: "Simple Table",
-        columns: [...tableColumns],
-        data: [...tableData]
-      },
-      table2: {
-        title: "Table on Plain Background",
-        columns: [...tableColumns],
-        data: [...tableData]
+  export default {
+    components: {
+      BaseAlert
+    },
+    data() {
+      return {
+        type: ["", "info", "success", "warning", "danger"],
+        notifications: {
+          topCenter: false
+        }
+      };
+    },
+    methods: {
+      notifyVue(verticalAlign, horizontalAlign) {
+        const color = Math.floor(Math.random() * 4 + 1);
+        this.$notify({
+          component: NotificationTemplate,
+          icon: "tim-icons icon-bell-55",
+          horizontalAlign: horizontalAlign,
+          verticalAlign: verticalAlign,
+          type: this.type[color],
+          timeout: 0
+        });
       }
-    };
-  }
-};
+    }
+  };
 </script>
 <style>
 </style>
