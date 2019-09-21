@@ -1,43 +1,59 @@
 <template>
+
   <div class="row">
-    <div class="col-md-8">
-      <edit-profile-form :model="model">
-      </edit-profile-form>
+    <h1>
+                Diário de Laboratório
+        </h1>
+        <h4> Postagens sobre o dia a dia no laboratória em linguagem acessível para a comunidade. </h4>
+    <div >
+      <h4 slot="header">Autor: Mariana Zagatti </h4>
+      <h4 slot="header">E-mail: marizagatti@ufscar.br </h4>
+      <h4 slot="header">Data: 21/09/2019 </h4>
+
+      <card>
+          <span>[ ---------      Inserir texto com até 1500 caracteres    --------- ]
+          </span>
+      </card>
+      <card>
+          <span>[ ---------      Inserir vídeo com até 1m30seg    --------- ]
+          </span>
+      </card>
     </div>
-    <div class="col-md-4">
-      <user-card :user="user"></user-card>
-    </div>
+
+    
+    
   </div>
 </template>
 <script>
-  import EditProfileForm from './Profile/EditProfileForm';
-  import UserCard from './Profile/UserCard'
+  import NotificationTemplate from './Notifications/NotificationTemplate';
+  import { BaseAlert } from '@/components';
+
   export default {
     components: {
-      EditProfileForm,
-      UserCard
+      BaseAlert
     },
     data() {
       return {
-        model: {
-          company: 'Creative Code Inc.',
-          email: 'mike@email.com',
-          username: 'michael23',
-          firstName: 'Mike',
-          lastName: 'Andrew',
-          address: 'Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09',
-          city: 'Melbourne',
-          country: 'Australia',
-          about: 'Lamborghini Mercy, Your chick she so thirsty, I\'m in that two seat Lambo.'
-        },
-        user: {
-          fullName: 'Mike Andrew',
-          title: 'Ceo/Co-Founder',
-          description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
+        type: ["", "info", "success", "warning", "danger"],
+        notifications: {
+          topCenter: false
         }
+      };
+    },
+    methods: {
+      notifyVue(verticalAlign, horizontalAlign) {
+        const color = Math.floor(Math.random() * 4 + 1);
+        this.$notify({
+          component: NotificationTemplate,
+          icon: "tim-icons icon-bell-55",
+          horizontalAlign: horizontalAlign,
+          verticalAlign: verticalAlign,
+          type: this.type[color],
+          timeout: 0
+        });
       }
     }
-  }
+  };
 </script>
 <style>
 </style>
